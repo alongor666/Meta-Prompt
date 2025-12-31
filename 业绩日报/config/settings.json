@@ -1,0 +1,68 @@
+{
+  "system": {
+    "name": "保险业务业绩分析系统",
+    "version": "1.0.0",
+    "author": "AI助手",
+    "created": "2025-12-30"
+  },
+  "data": {
+    "required_fields": [
+      "日期", "业务员", "三级机构", "签单保费", "险别", 
+      "交叉销售", "客户类别", "车辆类型", "是否续保", 
+      "终端来源", "是否新能源", "是否过户车"
+    ],
+    "file_formats": [".xlsx", ".xls", ".csv"],
+    "encoding": "utf-8"
+  },
+  "analysis": {
+    "dimensions": {
+      "A": {
+        "name": "签单保费总额",
+        "description": "每日保费统计、趋势分析、目标达成",
+        "key_metrics": ["总保费", "日均保费", "最高日保费", "签单总数"]
+      },
+      "B": {
+        "name": "业绩统计", 
+        "description": "业务员排行、机构对比、团队贡献",
+        "key_metrics": ["最佳业务员", "最佳机构", "业绩分布"]
+      },
+      "C": {
+        "name": "产品组合",
+        "description": "险别分布、交叉销售效果、产品策略", 
+        "key_metrics": ["交叉销售率", "险别占比", "平均保费"]
+      },
+      "D": {
+        "name": "客户细分",
+        "description": "客户类别、新旧车、续保分析",
+        "key_metrics": ["续保率", "客户类型分布", "车辆类型占比"]
+      },
+      "E": {
+        "name": "渠道来源",
+        "description": "终端效果、转化率、获客成本",
+        "key_metrics": ["最佳渠道", "渠道多样性", "转化率"]
+      },
+      "F": {
+        "name": "保费趋势",
+        "description": "时间趋势、季节性、预测模型",
+        "key_metrics": ["趋势方向", "增长率", "波动性"]
+      },
+      "G": {
+        "name": "特殊业务",
+        "description": "新能源车、过户车、市场机会",
+        "key_metrics": ["新能源车占比", "过户车占比", "增长潜力"]
+      }
+    }
+  },
+  "visualization": {
+    "theme": "apple_style",
+    "color_palette": ["#007AFF", "#34C759", "#FF9500", "#FF3B30", "#5856D6"],
+    "chart_types": ["line", "bar", "pie", "scatter", "heatmap"],
+    "output_format": "html"
+  },
+  "output": {
+    "report_template": "apple_style",
+    "auto_generate": true,
+    "export_formats": ["html", "pdf"],
+    "language": "zh-CN"
+  }
+}

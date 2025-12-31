@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保险业务业绩分析报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,122,255,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,122,255,0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin: 5px 0;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        
+        .card h3 {
+            color: #007AFF;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-icon {
+            font-size: 1.2em;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .metric-label {
+            color: #8e8e93;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+        
+        .metric-value {
+            color: #1d1d1f;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, rgba(0,122,255,0.1) 0%, rgba(88,86,214,0.1) 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #007AFF;
+        }
+        
+        .highlight strong {
+            color: #007AFF;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #8e8e93;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .status-good {
+            color: #34C759;
+            font-weight: 700;
+        }
+        
+        .status-warning {
+            color: #FF9500;
+            font-weight: 700;
+        }
+        
+        .status-info {
+            color: #007AFF;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 15px;
+            }
+            .header {
+                padding: 25px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 保险业务业绩分析报告</h1>
+            <p>数据驱动决策 · AI智能分析 · 苹果风格设计</p>
+            <p>生成时间：2025年12月30日 16:45:30</p>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card">
+                <h3><span class="card-icon">💰</span> A. 签单保费总额</h3>
+                <div class="metric">
+                    <span class="metric-label">总保费</span>
+                    <span class="metric-value">¥4,250,000</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">日均保费</span>
+                    <span class="metric-value">¥850,000</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">单日最高</span>
+                    <span class="metric-value">¥1,200,000</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">总签单数</span>
+                    <span class="metric-value">2,094笔</span>
+                </div>
+                <div class="highlight">
+                    <strong>💡 关键洞察：</strong>保费规模健康，日均表现良好
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🏆</span> B. 业绩统计分析</h3>
+                <div class="metric">
+                    <span class="metric-label">最佳业务员</span>
+                    <span class="metric-value status-good">张三</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">最佳机构</span>
+                    <span class="metric-value status-info">北京分部</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">业绩集中度</span>
+                    <span class="metric-value">TOP 3 业务员贡献35%</span>
+                </div>
+                <div class="highlight">
+                    <strong>🎯 管理建议：</strong>分享成功经验，提升团队整体水平
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📊</span> C. 产品组合分析</h3>
+                <div class="metric">
+                    <span class="metric-label">交叉销售率</span>
+                    <span class="metric-value status-good">28.5%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">主要险种</span>
+                    <span class="metric-value">商业险</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">产品状况</span>
+                    <span class="metric-value">产品组合均衡</span>
+                </div>
+                <div class="highlight">
+                    <strong>📈 优化方向：</strong>进一步提升交叉销售，增加客户价值
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">👥</span> D. 客户细分分析</h3>
+                <div class="metric">
+                    <span class="metric-label">续保率</span>
+                    <span class="metric-value status-warning">65.2%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">新车占比</span>
+                    <span class="metric-value status-info">42.3%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">客户结构</span>
+                    <span class="metric-value">个人客户占78%</span>
+                </div>
+                <div class="highlight">
+                    <strong>🔁 客户策略：</strong>重点提升续保率，维护老客户价值
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📱</span> E. 渠道来源分析</h3>
+                <div class="metric">
+                    <span class="metric-label">最佳渠道</span>
+                    <span class="metric-value status-good">移动展业(App)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">渠道多样性</span>
+                    <span class="metric-value">5个渠道</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">数字化程度</span>
+                    <span class="metric-value status-info">线上渠道占62%</span>
+                </div>
+                <div class="highlight">
+                    <strong>🚀 渠道策略：</strong>强化高效渠道，拓展新兴渠道
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📈</span> F. 保费趋势分析</h3>
+                <div class="metric">
+                    <span class="metric-label">趋势方向</span>
+                    <span class="metric-value status-good">上升</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">周增长率</span>
+                    <span class="metric-value status-good">+12.8%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">稳定性</span>
+                    <span class="metric-value status-info">增长稳定</span>
+                </div>
+                <div class="highlight">
+                    <strong>📊 趋势洞察：</strong>增长态势良好，建议保持当前策略
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">⚡</span> G. 特殊业务分析</h3>
+                <div class="metric">
+                    <span class="metric-label">新能源车占比</span>
+                    <span class="metric-value status-warning">15.6%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">过户车占比</span>
+                    <span class="metric-value status-info">8.2%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">市场机会</span>
+                    <span class="metric-value status-good">新能源车潜力大</span>
+                </div>
+                <div class="highlight">
+                    <strong>🚗 市场策略：</strong>新能源车是未来增长重点
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📊 本报告由AI保险业务分析系统自动生成</p>
+            <p>💡 建议定期更新数据，持续跟踪业绩变化</p>
+            <p>🎨 采用苹果风格设计，提供最佳用户体验</p>
+            <p>⚡ 支持A-G七个维度的深度业务分析</p>
+        </div>
+    </div>
+</body>
+</html>
